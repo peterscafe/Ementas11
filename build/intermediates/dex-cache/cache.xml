@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Users/pedrobernardo/AndroidStudioProjects/Ementas11/app/libs/ksoap2-android-assembly-2.6.5-jar-with-dependencies.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="4e18c032c01420871b8734937029be5543107ae3">
+        <dex dex="/Users/pedrobernardo/AndroidStudioProjects/Ementas11/app/build/intermediates/pre-dexed/debug/ksoap2-android-assembly-2.6.5-jar-with-dependencies_577b087e40de280ff7cc74f2d83f8c18a4b42f74.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/pedrobernardo/AndroidStudioProjects/Ementas11/app/libs/jsoup-1.8.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="3d57e95c0f150b885ccdbda7a12bef353fd31d02">
+        <dex dex="/Users/pedrobernardo/AndroidStudioProjects/Ementas11/app/build/intermediates/pre-dexed/debug/jsoup-1.8.1_160a4190e79fcbf2849c2c8d3d5a4865c2db0595.jar" />
+    </item>
+
+</items>
