@@ -54,18 +54,34 @@ public class menuHelper {
 					JSONArray jTraducoes=fProp.getJSONArray("value");
 					for (int j=0;j<jTraducoes.length();j++){
 						JSONObject jTrad=jTraducoes.getJSONObject(j);
-						m.set_titulos(jTrad.getString("@language"),jTrad.getString("#text"));
+						if(jTrad.has("#text")) m.set_titulos(jTrad.getString("@language"),jTrad.getString("#text"));
 					}
 
 				} else if (propKey.equals("property_lista_artigos")) {
-					m.set_listaArtigos(fProp.getJSONObject("value").getBoolean("#text"));
+					if(fProp.getJSONObject("value").has("#text")) m.set_listaArtigos(fProp.getJSONObject("value").getBoolean("#text"));
+				} else if (propKey.equals("property_tipo_de_lista")) {
+					if(fProp.getJSONObject("value").has("#text")) m.set_tipoLista(fProp.getJSONObject("value").getString("#text"));
+				} else if (propKey.equals("property_icon_categoria_1")) {
+					if(fProp.getJSONObject("value").has("#text")) m.set_iconCat(fProp.getJSONObject("value").getString("#text"));
+				} else if (propKey.equals("property_logo_topo")) {
+					if(fProp.getJSONObject("value").has("#text")) m.set_logoTopo(fProp.getJSONObject("value").getString("#text"));
+				} else if (propKey.equals("property_idioma_unico")) {
+					if(fProp.getJSONObject("value").has("#text")) m.set_idiomaUnico(fProp.getJSONObject("value").getBoolean("#text"));
+				}else if (propKey.equals("property_infoiva")) {
+					if(fProp.getJSONObject("value").has("#text")) m.set_infoIva(fProp.getJSONObject("value").getBoolean("#text"));
+				}else if (propKey.equals("property_label_preco_1")) {
+					if(fProp.getJSONObject("value").has("#text")) m.set_labelPreco1(fProp.getJSONObject("value").getString("#text"));
+				}else if (propKey.equals("property_label_preco_2")) {
+					if(fProp.getJSONObject("value").has("#text")) m.set_labelPreco2(fProp.getJSONObject("value").getString("#text"));
+				}else if (propKey.equals("property_label_preco_3")) {
+					if(fProp.getJSONObject("value").has("#text")) m.set_labelPreco3(fProp.getJSONObject("value").getString("#text"));
 				}
+
 
 			}
 		}catch (JSONException e) {
 			Log.d("JSON",e.getMessage());
 		}
-
 		return m;
 	}
 
